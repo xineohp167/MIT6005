@@ -18,7 +18,8 @@ public class IntegerExpressionParser {
      * @throws UnableToParseException if example expression can't be parsed
      */
     public static void main(final String[] args) throws UnableToParseException {
-        final String input = "54+(2+ 89)";
+        //final String input = "54 + 23";
+    	final String input = "54+(2+ 89)";
         System.out.println(input);
         final IntegerExpression expression = IntegerExpressionParser.parse(input);
         final int value = expression.value();
@@ -78,7 +79,7 @@ public class IntegerExpressionParser {
         System.out.println("parse tree " + parseTree);
 
         // display the parse tree in a web browser, for debugging only
-        Visualizer.showInBrowser(parseTree);
+       //  Visualizer.showInBrowser(parseTree);
 
         // make an AST from the parse tree
         final IntegerExpression expression = makeAbstractSyntaxTree(parseTree);
